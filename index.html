@@ -18,6 +18,7 @@
     --white: #FFFFFF;
     --red: #E63946;
     --red-deep: #C82A38;
+    --scarlet: #FF4655;
     --gray: #6E6E6E;
     --gray-2: #9A9A9A;
     --line: #C8C2B5;
@@ -205,6 +206,30 @@
   .cta-red:hover { background: var(--red-deep); transform: translateY(-1px); box-shadow: 0 10px 24px -8px rgba(230, 57, 70, 0.6); }
   .cta-red:active { transform: translateY(0); }
 
+  .cta-wa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--wa);
+    color: var(--white);
+    padding: 18px 22px;
+    border-radius: 100px;
+    font-size: clamp(13px, 3.4vw, 15px);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 6px 20px -8px rgba(37, 211, 102, 0.55);
+    width: 100%;
+  }
+  .cta-wa:hover { background: #1FB957; transform: translateY(-1px); box-shadow: 0 10px 24px -8px rgba(37, 211, 102, 0.7); }
+  .cta-wa:active { transform: translateY(0); }
+  .cta-wa svg { flex-shrink: 0; }
+
   .cta-black {
     display: flex;
     align-items: center;
@@ -225,6 +250,33 @@
     width: 100%;
   }
   .cta-black:hover { background: #222; transform: translateY(-1px); }
+
+  .cta-ig {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(45deg, #FFC837 0%, #FF8A3D 18%, #F5365C 38%, #E11A6F 58%, #BD0F8C 78%, #6F2DA8 100%);
+    color: var(--white);
+    padding: 16px 22px;
+    border-radius: 100px;
+    font-size: clamp(12px, 3.2vw, 14px);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 0 6px 20px -8px rgba(225, 26, 111, 0.55);
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-ig:hover { transform: translateY(-1px); box-shadow: 0 10px 26px -8px rgba(225, 26, 111, 0.7); filter: saturate(1.1); }
+  .cta-ig:active { transform: translateY(0); }
+  .cta-ig .ig-icon { flex-shrink: 0; }
 
   /* ============= BENEFITS (white section) ============= */
   .benefits {
@@ -295,9 +347,10 @@
     font-size: clamp(34px, 11vw, 56px);
     line-height: 0.92;
     letter-spacing: -0.035em;
-    color: var(--red);
+    color: var(--scarlet);
     text-transform: uppercase;
     margin-bottom: 18px;
+    text-shadow: 0 0 1px rgba(255, 70, 85, 0.25);
   }
   .expert-bio {
     font-size: 14px;
@@ -324,7 +377,7 @@
     width: max-content;
     max-width: 100%;
   }
-  .expert-tag .red-acc { color: var(--red); font-weight: 800; }
+  .expert-tag .red-acc { color: var(--scarlet); font-weight: 800; }
 
   /* ============= TOPICS (dark) ============= */
   .topics {
@@ -492,13 +545,17 @@
         </div>
 
         <div class="hero-photo">
-          <img src="aliya.jpg" alt="Алия Токсанбаева" onerror="this.style.display='none'">
+          <img src="алия.jpg" alt="Алия Токсанбаева" onerror="this.style.display='none'">
         </div>
       </div>
 
       <div class="hero-price">0&nbsp;<span class="unit">₸</span></div>
       <a class="cta-red" href="https://chat.whatsapp.com/HCT9o2mYHCb1c0IoxWjxmm?mode=gi_t" target="_blank" rel="noopener">
         Присоединиться к&nbsp;вебинару
+      </a>
+      <a class="cta-ig" href="https://www.instagram.com/altoxi/" target="_blank" rel="noopener">
+        <svg class="ig-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        Инстаграм эксперта
       </a>
     </div>
   </section>
@@ -531,6 +588,10 @@
     <a class="cta-black" href="https://chat.whatsapp.com/HCT9o2mYHCb1c0IoxWjxmm?mode=gi_t" target="_blank" rel="noopener">
       Получить бонус за&nbsp;вступление
     </a>
+    <a class="cta-ig" href="https://www.instagram.com/altoxi/" target="_blank" rel="noopener">
+      <svg class="ig-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      Instagram&nbsp;Алии
+    </a>
   </section>
 
   <!-- ============= EXPERT ============= -->
@@ -553,33 +614,38 @@
   <!-- ============= 5 ТЕМ ============= -->
   <section class="topics reveal">
     <div class="topics-num">5&nbsp;ТЕМ</div>
-    <p class="topics-sub">которые уже&nbsp;сейчас изменят ваш бизнес</p>
+    <p class="topics-sub">как заработать на&nbsp;ИИ уже&nbsp;в&nbsp;2026 году</p>
 
     <div class="topics-list">
       <div class="topic-card">
         <div class="topic-num">01</div>
-        <p>5 точек роста, где ИИ заберёт рутину уже&nbsp;на&nbsp;первой неделе</p>
+        <p>5 точек роста, где ИИ заберёт рутину и&nbsp;принесёт <strong>+30–50% к&nbsp;прибыли</strong> уже&nbsp;на&nbsp;первой неделе</p>
       </div>
       <div class="topic-card">
         <div class="topic-num">02</div>
-        <p>как предпринимателю запустить <strong>команду ИИ-агентов</strong> за&nbsp;14&nbsp;дней без программистов</p>
+        <p>как запустить <strong>команду ИИ-агентов</strong> за&nbsp;14&nbsp;дней без программистов — и&nbsp;начать <strong>зарабатывать на&nbsp;ней</strong> ещё на&nbsp;этапе настройки</p>
       </div>
       <div class="topic-card">
         <div class="topic-num">03</div>
-        <p>ИИ-агенты, которые заменяют SMM, продажника и&nbsp;ассистента — и&nbsp;работают 24/7</p>
+        <p>ИИ-агенты вместо SMM, продажника и&nbsp;ассистента — <strong>экономия от&nbsp;500&nbsp;000&nbsp;₸ в&nbsp;месяц</strong> на&nbsp;штате, работают 24/7</p>
       </div>
       <div class="topic-card">
         <div class="topic-num">04</div>
-        <p>как настроить ИИ-продажи, которые отвечают клиентам ночью и&nbsp;закрывают сделки <strong>без вас</strong></p>
+        <p>как настроить <strong>ИИ-продажи 24/7</strong>, которые отвечают клиентам ночью и&nbsp;<strong>приносят кассу пока вы&nbsp;спите</strong></p>
       </div>
       <div class="topic-card">
         <div class="topic-num">05</div>
-        <p><strong>5 ошибок с&nbsp;ИИ</strong>, из-за которых предприниматели бросают и&nbsp;теряют деньги</p>
+        <p><strong>5 ошибок с&nbsp;ИИ</strong>, из-за которых предприниматели <strong>теряют деньги</strong> вместо того, чтобы&nbsp;на&nbsp;этом зарабатывать</p>
       </div>
     </div>
 
-    <a class="cta-red" href="https://chat.whatsapp.com/HCT9o2mYHCb1c0IoxWjxmm?mode=gi_t" target="_blank" rel="noopener">
+    <a class="cta-wa" href="https://chat.whatsapp.com/HCT9o2mYHCb1c0IoxWjxmm?mode=gi_t" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
       Присоединиться к&nbsp;чату вебинара
+    </a>
+    <a class="cta-ig" href="https://www.instagram.com/altoxi/" target="_blank" rel="noopener">
+      <svg class="ig-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      Instagram&nbsp;Алии
     </a>
   </section>
 
