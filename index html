@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Бизнес на ИИ в 2026 — вебинар Алии Токсанбаевой</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #E9E5DA;
+    --card: #DDD8CC;
+    --black: #000000;
+    --dark: #111111;
+    --dark-card: #1F1F1F;
+    --dark-card-2: #2A2A2A;
+    --white: #FFFFFF;
+    --red: #E63946;
+    --red-deep: #C82A38;
+    --gray: #6E6E6E;
+    --gray-2: #9A9A9A;
+    --line: #C8C2B5;
+    --wa: #25D366;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--black);
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--red); color: #fff; }
+
+  .lp { max-width: 540px; margin: 0 auto; padding: 16px 14px 24px; }
+
+  /* ============= HERO ============= */
+  .hero-card {
+    background: var(--card);
+    border-radius: 28px;
+    padding: 18px 18px 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-pill {
+    margin: 0 auto 18px;
+    display: block;
+    width: max-content;
+    background: var(--white);
+    border: 1px solid var(--line);
+    color: var(--black);
+    padding: 7px 18px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+  }
+  .hero-text { min-width: 0; }
+  .hero-tag {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--gray);
+    letter-spacing: 0.18em;
+    margin-bottom: 6px;
+  }
+  .hero h1 {
+    font-weight: 900;
+    font-size: clamp(36px, 11vw, 60px);
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+    color: var(--black);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .hero h1 .red { color: var(--red); display: inline-block; }
+  .hero-h1-sub {
+    font-size: 10.5px;
+    color: var(--red);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 1.3;
+    margin: 6px 0 14px;
+    max-width: 200px;
+  }
+  .hero h2 {
+    font-weight: 800;
+    font-size: clamp(13px, 3.6vw, 17px);
+    line-height: 1.15;
+    color: var(--black);
+    text-transform: uppercase;
+    letter-spacing: -0.005em;
+    margin-bottom: 18px;
+    max-width: 220px;
+  }
+
+  .hero-eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--gray);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin: 14px 0 10px;
+  }
+
+  .info-box {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 11px 13px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--black);
+    line-height: 1.35;
+  }
+  .info-box .red-acc { color: var(--red); font-weight: 800; }
+  .info-icon {
+    flex-shrink: 0;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    border: 1.5px solid var(--black);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px;
+    font-weight: 800;
+    transform: rotate(-45deg);
+    line-height: 1;
+  }
+  .info-icon::before { content: '→'; transform: translateY(-1px); display: block; }
+
+  .hero-photo {
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 0.78;
+    background: linear-gradient(135deg, #6B6B6B, #2A2A2A);
+    position: relative;
+  }
+  .hero-photo::after {
+    /* placeholder text when image fails */
+    content: 'фото\AАлии';
+    white-space: pre;
+    text-align: center;
+    color: rgba(255,255,255,0.5);
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+  }
+  .hero-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-price {
+    font-weight: 900;
+    font-size: clamp(64px, 18vw, 96px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    margin: 22px 0 14px;
+    color: var(--black);
+  }
+  .hero-price .unit { font-size: 0.55em; }
+
+  .cta-red {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--red);
+    color: var(--white);
+    padding: 18px 22px;
+    border-radius: 100px;
+    font-size: clamp(13px, 3.4vw, 15px);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 6px 20px -8px rgba(230, 57, 70, 0.5);
+    width: 100%;
+  }
+  .cta-red:hover { background: var(--red-deep); transform: translateY(-1px); box-shadow: 0 10px 24px -8px rgba(230, 57, 70, 0.6); }
+  .cta-red:active { transform: translateY(0); }
+
+  .cta-black {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--black);
+    color: var(--white);
+    padding: 18px 22px;
+    border-radius: 100px;
+    font-size: clamp(12px, 3.2vw, 14px);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+  }
+  .cta-black:hover { background: #222; transform: translateY(-1px); }
+
+  /* ============= BENEFITS (white section) ============= */
+  .benefits {
+    background: var(--bg);
+    padding: 44px 6px 28px;
+  }
+  .benefits h2 {
+    font-weight: 900;
+    font-size: clamp(22px, 6vw, 30px);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    color: var(--black);
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    padding: 0 8px;
+  }
+  .benefits ul {
+    list-style: none;
+    padding: 0;
+  }
+  .benefits li {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 14px;
+    align-items: start;
+    padding: 12px 8px;
+    border-bottom: 1px solid var(--line);
+  }
+  .benefits li:last-child { border-bottom: none; }
+  .benefit-arrow {
+    flex-shrink: 0;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    border: 1.5px solid var(--black);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+    font-weight: 900;
+    margin-top: 2px;
+  }
+  .benefit-arrow::before { content: '↗'; }
+  .benefits li p {
+    font-size: 13.5px;
+    color: var(--black);
+    line-height: 1.5;
+    font-weight: 500;
+  }
+  .benefits li p strong { font-weight: 800; }
+  .benefits .cta-black { margin-top: 22px; }
+
+  /* ============= EXPERT (dark) ============= */
+  .expert {
+    background: var(--black);
+    border-radius: 20px;
+    padding: 36px 22px 30px;
+    margin-top: 22px;
+    color: var(--white);
+  }
+  .dark-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gray-2);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .expert h2 {
+    font-weight: 900;
+    font-size: clamp(34px, 11vw, 56px);
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .expert-bio {
+    font-size: 14px;
+    color: #D5D5D5;
+    line-height: 1.55;
+    margin-bottom: 18px;
+    max-width: 320px;
+  }
+  .expert-bio strong { color: var(--white); font-weight: 700; }
+
+  .expert-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .expert-tag {
+    background: var(--dark-card-2);
+    color: var(--white);
+    padding: 11px 18px;
+    border-radius: 100px;
+    font-size: 12.5px;
+    font-weight: 600;
+    line-height: 1.4;
+    width: max-content;
+    max-width: 100%;
+  }
+  .expert-tag .red-acc { color: var(--red); font-weight: 800; }
+
+  /* ============= TOPICS (dark) ============= */
+  .topics {
+    background: var(--black);
+    border-radius: 20px;
+    padding: 40px 22px 32px;
+    margin-top: 14px;
+    color: var(--white);
+  }
+  .topics-num {
+    font-weight: 900;
+    font-size: clamp(72px, 22vw, 120px);
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .topics-sub {
+    text-align: center;
+    font-size: clamp(13px, 3.5vw, 16px);
+    font-weight: 800;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+    max-width: 320px;
+    margin: 0 auto 26px;
+  }
+
+  .topics-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .topic-card {
+    background: var(--dark-card-2);
+    border-radius: 18px;
+    padding: 18px 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+  }
+  .topic-num {
+    font-weight: 900;
+    font-size: clamp(28px, 7vw, 36px);
+    color: var(--white);
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .topic-card p {
+    font-size: 13px;
+    color: var(--white);
+    line-height: 1.4;
+    font-weight: 500;
+  }
+  .topic-card p strong { font-weight: 800; }
+
+  /* ============= FOOTER ============= */
+  .footer {
+    text-align: center;
+    padding: 24px 8px 8px;
+    font-size: 11px;
+    color: var(--gray);
+    line-height: 1.5;
+  }
+
+  /* ============= ANIMATIONS ============= */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1),
+                transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  .hero-card { animation: fadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+
+  /* ============= DESKTOP ============= */
+  @media (min-width: 720px) {
+    .lp { max-width: 720px; padding: 24px 20px 32px; }
+    .hero-card { padding: 24px 28px 28px; border-radius: 32px; }
+    .hero-pill { font-size: 13px; padding: 8px 22px; margin-bottom: 22px; }
+    .hero-grid { grid-template-columns: 1.25fr 1fr; gap: 20px; }
+    .hero h1 { font-size: 72px; }
+    .hero-h1-sub { font-size: 12px; max-width: 280px; }
+    .hero h2 { font-size: 19px; max-width: 320px; }
+    .info-box { font-size: 13px; padding: 13px 16px; }
+    .hero-eyebrow { font-size: 11px; }
+    .hero-price { font-size: 120px; margin: 28px 0 18px; }
+    .cta-red, .cta-black { padding: 22px; font-size: 15px; }
+    .benefits { padding: 56px 16px 36px; }
+    .benefits h2 { font-size: 36px; }
+    .benefits li { padding: 16px 8px; }
+    .benefits li p { font-size: 15px; }
+    .expert { padding: 48px 32px 40px; border-radius: 24px; }
+    .expert h2 { font-size: 64px; }
+    .expert-bio { font-size: 15px; max-width: 460px; }
+    .expert-tag { font-size: 13.5px; padding: 12px 20px; }
+    .topics { padding: 56px 32px 40px; border-radius: 24px; }
+    .topics-num { font-size: 144px; }
+    .topics-sub { font-size: 18px; max-width: 400px; }
+    .topic-card { padding: 22px 26px; }
+    .topic-num { font-size: 40px; }
+    .topic-card p { font-size: 15px; }
+  }
+
+  @media (min-width: 1100px) {
+    .lp { max-width: 920px; }
+    .hero h1 { font-size: 88px; }
+    .hero-grid { gap: 32px; }
+    .hero-price { font-size: 144px; }
+    .expert h2 { font-size: 80px; }
+    .topics-num { font-size: 180px; }
+  }
+
+  /* Small phones */
+  @media (max-width: 360px) {
+    .hero-card { padding: 14px 14px 18px; border-radius: 24px; }
+    .hero-grid { gap: 8px; }
+    .hero h1 { font-size: 32px; }
+    .hero-h1-sub { font-size: 9.5px; max-width: 170px; }
+    .hero h2 { font-size: 12px; max-width: 190px; }
+    .info-box { font-size: 11.5px; padding: 9px 11px; }
+    .info-icon { width: 20px; height: 20px; font-size: 12px; }
+    .hero-price { font-size: 56px; }
+    .cta-red, .cta-black { font-size: 12px; padding: 16px; }
+    .benefits h2 { font-size: 22px; }
+    .expert { padding: 28px 18px 24px; }
+    .topics { padding: 32px 18px 28px; }
+    .topic-card { padding: 14px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="lp">
+
+  <!-- ============= HERO ============= -->
+  <section class="hero">
+    <div class="hero-card">
+      <div class="hero-pill">Алия Токсанбаева</div>
+
+      <div class="hero-grid">
+        <div class="hero-text">
+          <div class="hero-tag">ВЕБИНАР</div>
+          <h1>БИЗНЕС<br>НА&nbsp;ИИ&nbsp;<span class="red">В 2026</span></h1>
+          <p class="hero-h1-sub">для предпринимательниц и&nbsp;предпринимателей</p>
+          <h2>КАК БИЗНЕС МОЖЕТ РАБОТАТЬ БЕЗ ВАС</h2>
+
+          <div class="info-box">
+            <div class="info-icon"></div>
+            <div>Вступить в группу можно только&nbsp;<span class="red-acc">до 28&nbsp;апреля</span></div>
+          </div>
+          <div class="info-box">
+            <div class="info-icon"></div>
+            <div>Только для участников закрытой группы&nbsp;<span class="red-acc">ПОДАРОК</span></div>
+          </div>
+        </div>
+
+        <div class="hero-photo">
+          <img src="aliya.jpg" alt="Алия Токсанбаева" onerror="this.style.display='none'">
+        </div>
+      </div>
+
+      <div class="hero-price">0&nbsp;<span class="unit">₸</span></div>
+      <a class="cta-red" href="https://chat.whatsapp.com/HCT9o2mYHCb1c0IoxWjxmm?mode=gi_t" target="_blank" rel="noopener">
+        Присоединиться к&nbsp;вебинару
+      </a>
+    </div>
+  </section>
+
+  <!-- ============= BENEFITS ============= -->
+  <section class="benefits reveal">
+    <h2>В&nbsp;закрытом чате<br>вебинара вы</h2>
+    <ul>
+      <li>
+        <div class="benefit-arrow"></div>
+        <p>Получите быстрые и&nbsp;точные ответы на&nbsp;свои вопросы</p>
+      </li>
+      <li>
+        <div class="benefit-arrow"></div>
+        <p>Сохраните доступ ко&nbsp;всем материалам и&nbsp;записям</p>
+      </li>
+      <li>
+        <div class="benefit-arrow"></div>
+        <p>Сможете узнавать о&nbsp;новых вебинарах</p>
+      </li>
+      <li>
+        <div class="benefit-arrow"></div>
+        <p>Поймёте, как предприниматель может запустить <strong>команду ИИ-агентов</strong> в&nbsp;свой бизнес и&nbsp;зарабатывать больше уже через 2&nbsp;недели</p>
+      </li>
+      <li>
+        <div class="benefit-arrow"></div>
+        <p>Узнаете, как зарабатывать <strong>+30–50% к&nbsp;доходу</strong> без штата, без выгорания и&nbsp;без ежедневного участия</p>
+      </li>
+    </ul>
+    <a class="cta-black" href="https://chat.whatsapp.com/HCT9o2mYHCb1c0IoxWjxmm?mode=gi_t" target="_blank" rel="noopener">
+      Получить бонус за&nbsp;вступление
+    </a>
+  </section>
+
+  <!-- ============= EXPERT ============= -->
+  <section class="expert reveal">
+    <div class="dark-eyebrow">КТО ВЕДЁТ ВЕБИНАР</div>
+    <h2>АЛИЯ<br>ТОКСАНБАЕВА</h2>
+    <p class="expert-bio">
+      предприниматель, общественный деятель, ментор и&nbsp;инвестор. <strong>основатель 5&nbsp;бизнесов</strong>, которые работают без её&nbsp;ежедневного участия.
+    </p>
+    <div class="expert-tags">
+      <span class="expert-tag">основатель <span class="red-acc">5 бизнесов</span></span>
+      <span class="expert-tag"><span class="red-acc">13+ лет</span> в&nbsp;юридической сфере</span>
+      <span class="expert-tag">консалтинговая компания с&nbsp;филиалами по&nbsp;всему&nbsp;Казахстану</span>
+      <span class="expert-tag">внедряет ИИ в&nbsp;бизнес <span class="red-acc">с&nbsp;2025&nbsp;года</span> — практик, не&nbsp;теоретик</span>
+      <span class="expert-tag">создала ИИ-отдел продаж 24/7 — <span class="red-acc">+15% к&nbsp;конверсии</span></span>
+      <span class="expert-tag"><span class="red-acc">«мои бизнесы</span> работают без моего ежедневного участия<span class="red-acc">»</span></span>
+    </div>
+  </section>
+
+  <!-- ============= 5 ТЕМ ============= -->
+  <section class="topics reveal">
+    <div class="topics-num">5&nbsp;ТЕМ</div>
+    <p class="topics-sub">которые уже&nbsp;сейчас изменят ваш бизнес</p>
+
+    <div class="topics-list">
+      <div class="topic-card">
+        <div class="topic-num">01</div>
+        <p>5 точек роста, где ИИ заберёт рутину уже&nbsp;на&nbsp;первой неделе</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-num">02</div>
+        <p>как предпринимателю запустить <strong>команду ИИ-агентов</strong> за&nbsp;14&nbsp;дней без программистов</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-num">03</div>
+        <p>ИИ-агенты, которые заменяют SMM, продажника и&nbsp;ассистента — и&nbsp;работают 24/7</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-num">04</div>
+        <p>как настроить ИИ-продажи, которые отвечают клиентам ночью и&nbsp;закрывают сделки <strong>без вас</strong></p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-num">05</div>
+        <p><strong>5 ошибок с&nbsp;ИИ</strong>, из-за которых предприниматели бросают и&nbsp;теряют деньги</p>
+      </div>
+    </div>
+
+    <a class="cta-red" href="https://chat.whatsapp.com/HCT9o2mYHCb1c0IoxWjxmm?mode=gi_t" target="_blank" rel="noopener">
+      Присоединиться к&nbsp;чату вебинара
+    </a>
+  </section>
+
+  <div class="footer">
+    Закрытый WhatsApp-чат · Казахстан · 2026
+  </div>
+
+</div>
+
+<script>
+  // Reveal on scroll
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
